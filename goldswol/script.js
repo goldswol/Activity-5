@@ -1,4 +1,4 @@
-var req = new XMLHttpRequest();
+assignButton();
 
 function assignButton()
 {
@@ -6,21 +6,20 @@ function assignButton()
   button.addEventListener("click", poster);
 }
 
-function poster()
+function poster(event)
 {
+  event.preventDefault();
+  var req = new XMLHttpRequest();
+
   var cityName = document.getElementById("cityBox");
+  console.log(cityName.value);
   var countryId = document.getElementById("countryBox");
+  console.log(countryId.value);
   var payload;
-  if (countryId !== "")
-  {
-    payload = "api.openweathermap.org/data/2.5/weather?q="
-                  + cityName.textContent +","+ countryId.textContent
-                  + "&appid=172d38b22d297832b6c93682ee04d3e7";
-  } else {
-    payload = "api.openweathermap.org/data/2.5/weather?q="
-                  + cityName.textContent
-                  + "&appid=172d38b22d297832b6c93682ee04d3e7";
-  }
+  payload = "http://api.openweathermap.org/data/2.5/weather?q="
+            + cityName.value +","+ countryId.value
+            + "&appid=172d38b22d297832b6c93682ee04d3e7";
+  console.log(payload);
   req.open("GET", payload, true);
   req.addEventListener("load", function()
   {
