@@ -1,0 +1,18 @@
+body {
+  background-color: #def;
+}
+
+h3 {
+  background-color: #ff7;
+  width: 240px;
+}
+
+fieldset {
+  width: 165px;
+  border: 2px solid #fdd;
+  background-color: #ddd;
+}
+
+button {
+  background-color: #daa;
+}

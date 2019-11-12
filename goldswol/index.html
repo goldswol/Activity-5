@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="UTF-8">
+    <title>AJAX Interactions</title>
+    <link ref="stylesheet" href="stylesheet.css" type="text/css">
+  </head>
+  <body id="body">
+    <h3>Welcome to the weather store</h3>
+    <p>Please select a locale to gather weather from:</p>
+    <form >
+      <fieldset>
+        <label>City:</label>
+        <input type="text" id="cityBox">
+        <label>Country Code:</label>
+        <input type="text" id="countryBox">
+        <button id="submitButton">Submit</button>
+      </fieldset>
+    </form>
+    <fieldset>
+      <label>City:</label>
+      <span id="citySpan"></span>
+      <label>Temperature:</label>
+      <span id="tempSpan"></span>
+      <label>Humidity:</label>
+      <span id="humiSpan"></span>
+    </fieldset>
+    <script src="script.js"></script>
+  </body>
+</html>
